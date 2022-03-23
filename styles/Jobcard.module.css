@@ -1,0 +1,48 @@
+.job_card{
+    width: 40rem;
+}
+
+.job_company_name{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #132440;
+    margin-bottom: 0.8rem;
+}
+
+.job_title{
+    font-size: 0.8rem;	
+    color: #132440;
+}
+
+.job_title span{
+    color: #132440;
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    padding-right: 0.3rem;
+    font-weight:600;
+}
+
+.job_location_descripton{
+    display: flex;
+    gap:0.5rem;
+}
+
+.job_location span{
+    color: #132440;
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    padding-right: 0.3rem;
+    font-weight:600;
+}
+
+.job_location{
+    color: #132440;
+    text-transform: capitalize;
+    font-size: 0.8rem;
+}
+
+.job_description{
+    font-size: 0.9rem;
+    color: #132440;
+    margin-top: 0.3rem;
+}

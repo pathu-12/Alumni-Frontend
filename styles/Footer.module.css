@@ -1,0 +1,83 @@
+.footer{
+    background-color: #383838;
+    margin-top: 5rem;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_left{
+    width: 20rem;
+}
+
+.footer_college_name{
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.footer_links_title{
+    text-transform: capitalize;
+    margin-top: 0.3rem;
+}
+
+.footer_college_address{
+    text-transform: capitalize;
+    margin-top: 0.3rem;
+    font-size: 0.7rem;
+    color: #fff;
+}
+
+.footer_college_numbers{
+    text-transform: capitalize;
+    margin-top: 0.3rem;
+    font-size: 0.7rem;
+    color: #fff;
+}
+
+.footer_college_email{
+    text-transform: capitalize;
+    margin-top: 0.3rem;
+    font-size: 0.7rem;
+    color: #fff;
+}
+
+
+.footer_right{
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_middle a{
+    margin-top: 4rem;
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 0.8rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.footer_right{
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.follow_us_text{
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.social_media_links img{
+    padding-right: 0.5rem;
+}
