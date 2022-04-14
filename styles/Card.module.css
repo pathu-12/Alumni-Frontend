@@ -1,0 +1,28 @@
+.card{
+    width: 20rem;
+    height: 12rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: #fff;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.card::after{
+    content: "";
+    width: 20rem;
+    height: 12rem;
+    background: rgba(0, 0, 0, 0.027);
+    position: absolute;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card:hover{
+    margin-bottom: 1rem;
+}

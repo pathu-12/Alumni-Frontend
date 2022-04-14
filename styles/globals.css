@@ -11,3 +11,58 @@ body{
     font-size: 62.5%;
 }
 
+.about_us{
+    margin: 0 4rem 0 4rem;
+}
+
+.about_us p{
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.4;
+    line-height: 1.2rem;
+}
+
+.image_section{
+    width: 50%;
+}
+
+.about_us_section img{
+    height: 20rem;
+    object-fit: cover;
+    float: right;
+}
+
+.about_us_section{
+    margin: 3rem 0 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6rem;
+}
+
+.about_us_paras{
+    width: 50%;
+}
+
+.vision_mission{
+    display: flex;
+    margin: 0 4rem 0 4rem;
+    gap: 6rem;
+}
+
+.vision_mission .vison{
+    width: 50%;
+}
+
+.vision_mission .mission{
+    width: 50%;
+}
+
+.vision_mission p{
+    margin: 2rem 0 2rem 0;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.4;
+    line-height: 1.2rem;
+    text-align: center;
+}

@@ -1,0 +1,13 @@
+.grid{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 4rem 0 4rem;
+    height: 20rem;
+    align-items: center;
+}
+
+.dashboard_name{
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    margin: 2rem 4rem 0 4rem;
+}

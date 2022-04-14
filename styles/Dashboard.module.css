@@ -1,0 +1,10 @@
+.section{
+    margin: 3rem 0 3rem 0;
+}
+
+.section_name{
+    margin-left: 4rem;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}

@@ -1,0 +1,24 @@
+.heading{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+}
+
+.heading_text span{
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.heading_dash{
+    margin-top: 0.5rem;
+    width: 2rem;
+    height: 0.2rem;
+    border-radius: 3rem;
+    background-color: #A12023;
+    text-align: center;
+}

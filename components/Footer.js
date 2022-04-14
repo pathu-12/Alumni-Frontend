@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className={styles.footer_left}>
                     <img src="https://kjsieit.somaiya.edu.in//assets/kjsieit/images/Logo/Somaiya-white.svg" alt=""/>
                     <div className={styles.footer_college_name}>
-                        k j somaiya institute of engineering and it
+                        k j somaiya institute of engineering & it
                     </div>
                     <div className={styles.footer_college_address}>
                         Somaiya Ayurvihar Complex, Eastern Express Highway, Near Everard Nagar, Sion (East), Mumbai - 400 022

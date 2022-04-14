@@ -25,8 +25,6 @@ const Navbar = () => {
                 <div className={styles.mobile_navbar_btn} onClick={navbar_toggler}>
                     <ion-icon name="menu-outline" class={styles.mobile_nav_icon}></ion-icon>
                     <ion-icon name="close-outline" class={styles.mobile_nav_icon}></ion-icon>
-                    {/* <MenuOutline color={'#fafafa'} name="menu-outline" height="2rem" width="2rem"/>
-                    <CloseOutline color={'#fafafa'} name="close-outline" height="2rem" width="2rem"/> */}
                 </div>
             </div>
         </>
