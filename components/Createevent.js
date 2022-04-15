@@ -14,6 +14,9 @@ import Slide from '@mui/material/Slide';
 import TextField from '@mui/material/TextField';
 import { styled } from '@mui/material/styles';
 import { useState } from "react";
+import axios from "axios";
+import Router from 'next/router';
+import { FileUploader } from "react-drag-drop-files";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
@@ -27,6 +30,13 @@ export default function FullScreenDialog() {
     const [eventname, setEventname] = useState("");
     const [eventdescription, setEventdescription] = useState("");
     const [eventdatetime, setEventDatetime] = useState("2017-05-24T10:30");
+    const fileTypes = ["JPG", "PNG"];
+    const clearForm = ()=>{
+        setFile("");
+        setEventname("");
+        setEventdescription("");
+        setEventDatetime("2017-05-24T10:30");
+    }
     const submitForm = async (e) => {
         e.preventDefault();
         try {
@@ -34,17 +44,20 @@ export default function FullScreenDialog() {
             event_data.append("name", eventname);
             event_data.append("schedule", eventdatetime);
             event_data.append("description", eventdescription);
-            event_data.append("event_image", file);
-            console.log(event_data);
+            event_data.append("file", file);
             const { data } = await axios.post("http://localhost:8000/createevent", event_data);
         }
         catch (err) {
-            console.log(err.messge);
+            console.log(err);
         }
         handleClose();
+        clearForm();
+        Router.reload(window.location.pathname);
     }
 
-
+    const handleChange = (image) => {
+        setFile(image);
+    };
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -91,7 +104,7 @@ export default function FullScreenDialog() {
                 </AppBar>
                 <List sx={{ margin: "3rem 0 0 4rem" }}>
                     <form onSubmit={submitForm} autoComplete="off">
-                        <TextField id="outlined-basic" label="Event Name" variant="outlined" sx={{ width: "50%", marginBottom: "2rem" }} name="eventname" value={eventname} onChange={(e)=>setEventname(e.target.value)} /><br />
+                        <TextField id="outlined-basic" label="Event Name" variant="outlined" sx={{ width: "50%", marginBottom: "2rem" }} name="eventname" value={eventname} onChange={(e) => setEventname(e.target.value)} /><br />
                         <TextField
                             id="outlined-multiline-static"
                             label="Event Description"
@@ -99,7 +112,7 @@ export default function FullScreenDialog() {
                             rows={4}
                             name="eventdescription"
                             value={eventdescription}
-                            onChange={(e)=>setEventdescription(e.target.value)}
+                            onChange={(e) => setEventdescription(e.target.value)}
                             sx={{ width: "50%", marginBottom: "2rem" }}
                         /><br />
                         <TextField
@@ -114,13 +127,11 @@ export default function FullScreenDialog() {
                             sx={{ width: "50%", marginBottom: "2rem" }}
                             onChange={(e)=>setEventDatetime(e.target.value)}
                         /><br />
-                        <TextField
-                            type="file"
+                        <FileUploader
+                            handleChange={handleChange}
                             name="file"
-                            value={file}
-                            sx={{ width: "50%", marginBottom: "2rem" }}
-                            onChange={(e)=>setFile(e.target.value)} 
-                        /><br/>
+                            types={fileTypes}
+                        /><br />
                         <Button variant="contained" type="submit" size="large" sx={{ background: "#000" }}>
                             Submit
                         </Button>

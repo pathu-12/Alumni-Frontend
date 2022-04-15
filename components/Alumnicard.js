@@ -20,19 +20,23 @@ const columns = [
         format: (value) => value.toLocaleString('en-US'),
     },
     {
-        id: 'schedule',
-        label: 'Schedule',
+        id: 'registration_no',
+        label: 'Registration No',
         minWidth: 170,
         align: 'left',
-        format: (value) => value.toLocaleString('en-US'),
     },
     {
-        id: 'description',
-        label: 'Description',
+        id: 'passing_year',
+        label: 'Passing Year',
         minWidth: 170,
-        align: 'left',
-        format: (value) => value.toLocaleString('en-US'),
+        align: 'left'
     },
+    {
+        id: 'branch',
+        label: 'Branch',
+        minWidth: 170,
+        align: 'left'
+    }
 ];
 
 
@@ -42,9 +46,9 @@ const Jobscard = () => {
     const [dataget, setDataget] = useState(false);
     const fetch_events = async () => {
         try {
-            const events_api = await axios.get("http://localhost:8000/events");
+            const events_api = await axios.get("http://localhost:8000/alumnis");
             const data = await events_api.data;
-            setEventsdata(data.events);
+            setEventsdata(data.alumnis);
             setDataget(!dataget);
         }
         catch (err) {

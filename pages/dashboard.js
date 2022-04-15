@@ -7,6 +7,7 @@ import Createevent from "../components/Createevent";
 import Createjobs from "../components/Createjobs";
 import Footer from "../components/Footer";
 import Createalumni from "../components/Createalumni";
+import Alumnicard from "../components/Alumnicard";
 
 const Dashboard = () => {
     return (
@@ -32,6 +33,7 @@ const Dashboard = () => {
                     <div className={styles.section_name}>
                         Alumnis
                     </div>
+                    <Alumnicard/>
                     <Createalumni/>
                 </div>
             </div>

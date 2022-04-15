@@ -58,7 +58,6 @@ const Jobscard = () => {
             const jobs_api = await axios.get("http://localhost:8000/hirings");
             const data = await jobs_api.data;
             setJobsdata(data.hirings);
-            console.log(jobsdata);
             setDataget(!dataget);
         }
         catch (err) {

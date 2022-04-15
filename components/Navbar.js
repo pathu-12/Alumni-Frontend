@@ -19,7 +19,7 @@ const Navbar = () => {
                         <li><Link className="navbar_link" href="/">home</Link></li>
                         <li><Link className="navbar_link" href="/events">events</Link></li>
                         <li><Link className="navbar_link" href="/jobs">jobs</Link></li>
-                        <li><Link className="navbar_link" href="/">signup</Link></li>
+                        {/* <li><Link className="navbar_link" href="/">signup</Link></li> */}
                     </ul>
                 </div>
                 <div className={styles.mobile_navbar_btn} onClick={navbar_toggler}>

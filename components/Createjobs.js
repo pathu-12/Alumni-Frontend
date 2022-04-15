@@ -14,6 +14,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import Slide from '@mui/material/Slide';
 import TextField from '@mui/material/TextField';
 import axios from "axios";
+import Router from 'next/router';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
@@ -56,6 +57,7 @@ export default function FullScreenDialog() {
         }
         handleClose();
         clearForm();
+        Router.reload(window.location.pathname);
     }
 
     return (
